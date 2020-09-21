@@ -1,3 +1,11 @@
+/**普通指针样式**/
+body {
+  cursor: url("https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@1.0/hexo/鼠标指针美化/default.cur"), default;
+}
+/**链接指针样式**/
+a:hover {
+  cursor: url("https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@1.0/hexo/鼠标指针美化/pointer.cur"), pointer;
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
