@@ -4548,6 +4548,12 @@ mjx-container[jax='CHTML'][display='true'] {
   width: 32%;
   height: 180px;
 }
+@media screen and (max-width: 650px) {
+  #color-card {
+    width: 47%;
+    height: 150px;
+  }
+}
 #article-container .btn-center {
   margin: 0 0 1rem;
   text-align: center;
