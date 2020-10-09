@@ -2,7 +2,7 @@
  * @author admin@lilu.org.cn
  * Borrowed from circleMagic.js
  * modified a little
- */
+ *//**
 ;(function($){
     $.fn.circleMagic = function(options) {
         let width,height,largeContainer,canvas,ctx,target,animateHeader = true;
