@@ -1,4 +1,4 @@
-function travelling(){var t=new Array;
+function gallerysuijitupian(){var t=new Array;
 	if(t[0]="https://whiteshds.ml/Gallery/01/",
 	   t[1]="https://whiteshds.ml/Gallery/02/",
 	   t[2]="https://whiteshds.ml/Gallery/03/",
