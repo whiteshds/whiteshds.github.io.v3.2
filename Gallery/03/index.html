@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE HTML>
+<html class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="renderer" content="webkit">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/%E4%BB%93%E5%BA%93/%E5%9B%BE%E5%BA%8A/%E6%9E%AB%E5%8F%B6.png">
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/%E4%BB%93%E5%BA%93/%E5%9B%BE%E5%BA%8A/%E6%9E%AB%E5%8F%B6.png">
+<title>梦の图</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/css/jquery.fancybox.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/css/style_5.css" />
+<style type="text/css">
+	.notice-top {
+		color: PaleVioletRed;
+		border-color: PaleVioletRed;
+	}
+	.item-title {
+		opacity: 0.5;
+	}
+	.item-img, .item-title {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+	}
+	.item-link-text {
+		border: none;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+}
+.item {
+	height: 23vw;
+}
+@media screen and (max-width: 1199px) {
+	.item {
+		height: 23vw;
+	}
+}
+@media screen and (max-width: 991px) {
+	.item {
+		height: 32vw;
+	}
+}
+@media screen and (max-width: 767px) {
+	.item {
+		height: 45vw;
+	}
+}
+	#side-button {opacity: 1;}
+	#side-button li {border-radius: 20px;}
+/** diyCSS Start **/
+/** diyCSS End **/
+</style> <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/html5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/respond.min.js"></script>
+    <![endif]-->
+
+
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-post-16032'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-post-16032'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<script type="text/javascript">
+(function () {
+    var event = document.addEventListener ? {
+        add: 'addEventListener',
+        triggers: ['scroll', 'mousemove', 'keyup', 'touchstart'],
+        load: 'DOMContentLoaded'
+    } : {
+        add: 'attachEvent',
+        triggers: ['onfocus', 'onmousemove', 'onkeyup', 'ontouchstart'],
+        load: 'onload'
+    }, added = false;
+
+    document[event.add](event.load, function () {
+        var r = document.getElementById('respond-post-16032'),
+            input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = '_';
+        input.value = (function () {
+    var _U4t4v = //'uX'
+'0'+//'3'
+'b67'+'e'//'0TR'
++//'I'
+'5'+'1d1'//'4Z4'
++''///*'k'*/'k'
++'5'//'fO'
++'cd2'//'jX'
++'a2'//'lu'
++//'tVH'
+'tVH'+//'K09'
+'d'+//'zvn'
+'zvn'+'1'//'BE'
++//'O'
+'30f'+//'lkh'
+'6'+'d7'//'M'
++//'a'
+'a'+'w'//'w'
++//'Oo'
+'50b'+//'Kp'
+'Kp'+//'T2a'
+'15'+//'t'
+'91'+'d'//'VS'
++//'Zjg'
+'a', _kzC1slU = [[15,18],[16,19],[23,24],[23,24],[26,28]];
+    
+    for (var i = 0; i < _kzC1slU.length; i ++) {
+        _U4t4v = _U4t4v.substring(0, _kzC1slU[i][0]) + _U4t4v.substring(_kzC1slU[i][1]);
+    }
+
+    return _U4t4v;
+})();
+
+        if (null != r) {
+            var forms = r.getElementsByTagName('form');
+            if (forms.length > 0) {
+                function append() {
+                    if (!added) {
+                        forms[0].appendChild(input);
+                        added = true;
+                    }
+                }
+            
+                for (var i = 0; i < event.triggers.length; i ++) {
+                    var trigger = event.triggers[i];
+                    document[event.add](trigger, append);
+                    window[event.add](trigger, append);
+                }
+            }
+        }
+    });
+})();
+</script></head>
+<body>
+<!--[if lt IE 8]>
+    <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+<![endif]-->
+<div class="notice-top"><b>网站公告：带宽不大，敬请谅解~ 我会尽力维护</b>
+<!--<p>1.带宽不大，敬请谅解~</p>
+<p>2.我会尽力维护</p>-->
+</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container-fluid">
+
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>
+</button>
+<a class="navbar-brand" href="https://whiteshds.ml/"><img class="nav-logo" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/%E4%BB%93%E5%BA%93/%E5%9B%BE%E5%BA%8A/%E6%9E%AB%E5%8F%B6.png"></a>
+</div>
+
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+
+
+
+<li><a href="https://whiteshds.ml/" title="只是一个默认分类">Blog</a></li>
+
+
+
+</ul>
+
+
+
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown">
+
+<ul class="dropdown-menu">
+
+
+
+
+</ul>
+</div>
+</div>
+</nav>
+
+
+<div class="content">
+<div id="masonry" class="post row">
+
+<!--图片示例规范-->
+
+<!--<div data-fancybox="gallery" class="post-item col-xs-6 col-sm-4 col-md-3 col-lg-3" data-src="https://usr/uploads/2020/04/714015930.jpg">
+<img class="post-item-img lazy" src="https://i.loli.net/2020/10/19/un4c9A7kKvtfgeU.gif" data-original="https://usr/uploads/2020/04/714015930.jpg" alt="青青子 [2]" title="青青子 [2]">-->
+
+
+</div>
+
+<div data-fancybox="gallery" class="post-item col-xs-6 col-sm-4 col-md-3 col-lg-3" data-src="https://i.loli.net/2020/10/09/TA3o4jfHZrOzmUe.jpg">
+<img class="post-item-img lazy" src="https://i.loli.net/2020/10/19/un4c9A7kKvtfgeU.gif" data-original="https://i.loli.net/2020/10/09/TA3o4jfHZrOzmUe.jpg" alt="">
+</div>
+
+</div>
+<div class="post-info">
+<div class="post-info-box"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span><span class="post-info-title anti-select">标题：</span><span class="post-info-text">青青子</span></div>
+<div class="post-info-box"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="post-info-title anti-select">日期：</span><span class="post-info-text">2020/10/20</span></div>
+<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><span class="post-info-title anti-select">描述：</span><span class="post-info-text">版画</span></div><div class="post-tags">（第一期）</div></div><div id="post-comments"></div>
+<!--页脚图页选择-->
+<span class="glyphicon glyphicon-picture" aria-hidden="true"></span>
+
+
+
+<ol class="page-navigator"><li class="prev"><a href="https://whiteshds.ml" target="_self">&laquo;</a></li><li><a href="https://whiteshds.ml" target="_self">1</a></li><li><a href="https://whiteshds.ga" target="_self">2</a></li><li><a href="https://whiteshds.ga" target="_self">3</a></li><li><a href="https://whiteshds.ga" target="_self">4</a></li><li class="next"><a href="https://whiteshds.ga" target="_self">&raquo;</a></li></ol></div>
+
+
+<div id="side-button">
+<ul>
+<li id="go-top"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></li>
+<li id="go-bottom"><span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span></li>
+<li id="show-qrcode" onclick="showQrcode()"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span></li>
+<!--随机指定页面-->
+<li id="randomPost" onclick="location.href='http://whiteshds.ml';"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></li> </ul>
+</div>
+<div id="no-data"></div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/masonry-docs.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/infinite-scroll.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/shortcut.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/core.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/guestures.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/hash.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/media.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/wheel.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/js/thumbs.js"></script>
+<script type="text/javascript">if(history.length < 2){$('.header-post-back').css('opacity', 0);}</script>
+<script type="text/javascript">
+	$(function() {
+			//fancybox3
+		$('[data-fancybox="gallery"]').fancybox({
+			toolbar: true,
+			loop: false,
+			smallBtn : false,
+			buttons: [
+"download","thumbs","close"			],
+			iframe : {
+				preload : false
+			}
+		})
+		});
+	//lazyload
+	$(function() {
+		$("img.lazy").lazyload({
+			placeholder : "https://i.loli.net/2020/10/19/un4c9A7kKvtfgeU.gif",
+			effect: "fadeIn",			load: function(ele){
+				//masonry
+				var $container = $('#masonry');
+				$container.imagesLoaded(function() {
+					$container.masonry({
+						itemSelector: '.post-item',
+						gutter: 0,
+						isAnimated: false,
+					});
+				});
+            },		});
+	});
+	//showcomment
+	$(function() {
+		if(window.location.href.indexOf("#comment-")>-1) {
+			$("#post-comments").addClass("comment-open");
+		}
+		$("#ex-comment").click(function() {
+			$("#post-comments").toggleClass("comment-open");
+		});
+	});
+	//goToTop
+	$(function(){
+		$("#go-top").hide();
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 100){
+				$('#go-top').fadeIn();
+			}else{
+				$('#go-top').fadeOut();
+			}
+		});
+		$('#go-top').click(function(){
+			$('html ,body').animate({scrollTop: 0}, 300);
+			return false;
+		});
+	});
+	//goToBottom
+	$(function(){
+		$(window).scroll(function(){
+			if($(this).scrollTop() > (document.body.scrollHeight - 1000)) {
+				$('#go-bottom').fadeOut();
+			}else{
+				$('#go-bottom').fadeIn();
+			}
+		});
+		$('#go-bottom').click(function(){
+			$('html ,body').animate({scrollTop: document.body.scrollHeight}, 300);
+			return false;
+		});
+	});
+	//cookie opt
+	//代码修改自 https://www.cnblogs.com/shizhouyu/p/3963122.html
+	var cookieSet = function(key,val,time) { //设置cookie方法
+		var date = new Date(); //获取当前时间
+		var expiresDays = time; //将date设置为n天以后的时间
+		date.setTime(date.getTime() + expiresDays * 24 * 3600 * 1000); //格式化为cookie识别的时间
+		document.cookie = key + "=" + val + ";expires="+date.toGMTString(); //设置cookie
+	}
+	var cookieGet = function(key) { //获取cookie方法
+		/*获取cookie参数*/
+		var getCookie = document.cookie.replace(/[ ]/g,""); //获取cookie，并且将获得的cookie格式化，去掉空格字符
+		var arrCookie = getCookie.split(";") //将获得的cookie以"分号"为标识 将cookie保存到arrCookie的数组中
+		var tips; //声明变量tips
+		for(var i=0; i < arrCookie.length; i++) { //使用for循环查找cookie中的tips变量
+			var arr = arrCookie[i].split("="); //将单条cookie用"等号"为标识，将单条cookie保存为arr数组
+			if(key == arr[0]) { //匹配变量名称，其中arr[0]是指的cookie名称，如果该条变量为tips则执行判断语句中的赋值操作
+				tips = arr[1]; //将cookie的值赋给变量tips
+				break; //终止for循环遍历
+			}
+		}
+		return tips;
+	}
+	var cookieDelete = function(key) { //删除cookie方法
+		var date = new Date(); //获取当前时间
+		date.setTime(date.getTime() - 10000); //将date设置为过去的时间
+		document.cookie = key + "=v; expires =" + date.toGMTString(); //设置cookie
+	}
+	//random post link
+		var randomPost = 'http://whiteshds.ml/about';
+		//qrcode
+	var qrcodeDiv = $('<div id="qrcode" onclick="hiddQrcode()"></div>');
+    //二维码
+	var thisPageUrl = "/2020/10/19/ZsmnKpWQge8D3CM.png";
+	var qrcodeSrc = "https://i.loli.net" + encodeURI(thisPageUrl);
+	var qrcodeImg = $('<img>');
+	qrcodeImg.attr("src", qrcodeSrc);
+	qrcodeDiv.append(qrcodeImg); $('body').append(qrcodeDiv);
+	var showQrcode = function() {
+		$("#qrcode").css("display", "block");
+	}
+	var hiddQrcode = function() {
+		$("#qrcode").css("display", "none");
+	}
+	// toast
+	var toast = function (msg) {
+		setTimeout(function(){
+			var toastWrap = $('<div class="toast-wrap"></div>');
+			var toastMsg = $('<span class="toast-msg"></span>');
+			toastMsg.html(msg);
+			toastWrap.append(toastMsg);
+			$('body').append(toastWrap);
+			toastWrap.addClass('toastAnimate');
+		},200);
+	}
+</script>
+<div style="display:none;">
+
+
+<noscript><a href="/" target="_blank"><img  src="https://i.loli.net/2020/10/19/un4c9A7kKvtfgeU.gif" alt="" border="0"></a></noscript>
+
+</div>
+</body>
+</html>
