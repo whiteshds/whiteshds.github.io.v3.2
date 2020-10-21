@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://yayihouse.com/taobao.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>WHITESHDS-图廊</title>
+<style>
+#box div, box ul,box  li{margin:0; padding:0;font-style: normal;font:12px/22px "\5B8B\4F53",Arial, Helvetica, sans-serif}
+#box ol, box ul ,box li{list-style:none}
+#box img {border: 0; vertical-align:middle}
+#box .clear{clear:both;height:1px;width:100%; overflow:hidden; margin-top:-1px}
+#box a{color:#000000;text-decoration:none} 
+#box a:hover{color:#BA2636;text-decoration:underline}
+
+#box{width:925px; margin:20px auto; padding:2px;color:#000000;background:#FFF; text-align:center}
+#Marquee_x { overflow:hidden; width: 925px } 
+#Marquee_x ul li ,#Marquee_x ul li div{ float:left;line-height:25px;overflow:hidden}
+#Marquee_x ul li div{ float:left;line-height:25px; width:142px; overflow:hidden}
+#Marquee_x ul li div img{ border:1px solid #DADADA; width:140px; height:200px; display:block}
+#Marquee_x ul li div span{ display:block;font-size: 12px;line-height:16px;margin-top: 3px;}
+</style>
+
+<script src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/仓库/图廊/轮播图js/jquery.min.js"></script>
+<script>
+(function($){
+	$.fn.jcMarquee = function(options) {
+		var defaults = {
+			'marquee':'x',
+			'margin_bottom':'0',
+			'margin_right':'0',
+            'speed':'10'
+		};
+		var options = $.extend(defaults,options);
+		return this.each(function() {
+	        var $marquee = $(this),
+			    $marquee_scroll = $marquee.children('ul');
+			$marquee_scroll.append("<li class='clone'>"+"</li>");
+			$marquee_scroll.find('li').eq(0).children().clone().appendTo('.clone');
+			var $marquee_left = $marquee_scroll.find('li');
+			if (options.marquee == 'x') {
+				var x = 0;
+		        $marquee_scroll.css('width','1000%');
+				$marquee_left.find('div').css({'margin-right':options.margin_right});
+				$marquee_left.css({'margin-right':options.margin_right});
+                function Marquee_x(){ 
+	                $marquee.scrollLeft(++x);
+					_margin = parseInt($marquee_left.find('div').css('margin-right'));
+		            if(x==$marquee_left.width()+_margin) { x = 0 };
+				};
+		    	var MyMar=setInterval(Marquee_x,options.speed); 
+                $marquee.hover(function(){
+                    clearInterval(MyMar);
+                },function(){
+                    MyMar=setInterval(Marquee_x,options.speed);
+                });
+			}
+			if (options.marquee == 'y') {
+				var y = 0;
+		        $marquee_scroll.css('height','1000%');
+				$marquee_left.find('div').css('margin-bottom',options.margin_bottom);
+				$marquee_left.css('margin-bottom',options.margin_bottom);
+                function Marquee_y(){ 
+	                $marquee.scrollTop(++y);
+					_margin = parseInt($marquee_left.find('div').css('margin-bottom'));
+		            if(y==$marquee_left.height()+_margin) { y = 0 };
+				};
+		    	var MyMar=setInterval(Marquee_y,options.speed); 
+                $marquee.hover(function(){
+                    clearInterval(MyMar);
+                },function(){
+                    MyMar=setInterval(Marquee_y,options.speed);
+                });
+			};
+		});
+	};
+})(jQuery)
+$(function(){
+    
+	 var arr = $('#Marquee_x ul li:first div').toArray();
+       var len = arr.length;
+       var rand = parseInt(Math.random()*(len));
+       $('#Marquee_x ul li:first div').each(function(i){
+            $('#Marquee_x ul li:first').append($('#Marquee_x ul li:first div').eq(rand));
+            rand = parseInt(Math.random()*(len));
+       });
+    $('#Marquee_x').jcMarquee({ 'marquee':'x','margin_right':'10px','speed':8 });
+	//10px代表间距,20代表滚动速度
+});
+</script>
+</head>
+<body>
+<div id="box">
+<h4 style="color:lightblue;margin:10;">WHITESHDS | 图廊</h4>
+    <div id="Marquee_x">
+	    
+        <ul style="width: 1000%;">
+             <li style="margin-right: 10px;">
+			  <div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/1.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/1.JPG
+				"><span style="color:#88ff00;">展图<span style="color:#00ffff;">图链获取</span></span></span></a></div>
+				
+				
+                <div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/2.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/2.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/3.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/3.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/4.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/4.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/5.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/5.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/6.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/6.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/7.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/7.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/8.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/8.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/9.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/9.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/10.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/10.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/11.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/11.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/12.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/12.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/13.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/13.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/14.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/14.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/15.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/15.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/16.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/16.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/17.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/17.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/18.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/18.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/19.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/19.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/20.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/20.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/21.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/21.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/22.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/22.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/23.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/23.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/24.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/24.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/25.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/25.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/26.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/26.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/27.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/27.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/28.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/28.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/29.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/29.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>
+
+				<div style="margin-right: 10px;"><a href="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/30.JPG
+				" target="_blank"><img src="
+				https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/Gallery%E5%9B%BE%E5%BB%8A/04/30.JPG
+				"><span style="color:#88ff00">展图<span style="color:#00ffff;">图链获取</span></span></a></div>          
+            </li>			 
+			 </ul>
+    </div>
+</div>
+
+
+
+</body></html>
