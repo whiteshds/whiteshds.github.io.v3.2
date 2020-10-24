@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://whiteshds.ml/"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>WHITESHDS</title>
+        <link rel="icon" href="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/%E4%BB%93%E5%BA%93/%E5%9B%BE%E5%BA%8A/%E5%8D%9A%E6%96%87%E9%85%8D%E5%9B%BE/005.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.7.55/css/materialdesignicons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css">
+        
+        <style id="less:css-poi" type="text/css">* {
+  font-family: "Microsoft YaHei", "PingFang SC", "sans-serif";
+  box-sizing: border-box;
+}
+.mdi {
+  display: inline-block;
+  font-family: "Material Design Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+rt {
+  font-size: 100%;
+  transform: scale(0.8);
+}
+code,
+code * {
+  font-family: Consolas, "Microsoft YaHei Light";
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+}
+.bg {
+  overflow: hidden;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+}
+.bg .bg-ct {
+  z-index: -1;
+  background-image: url("https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/%E4%BB%93%E5%BA%93/%E5%9B%BE%E5%BA%8A/%E5%8D%9A%E6%96%87%E9%85%8D%E5%9B%BE/005.jpg");
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  height: 100vh;
+  transform: scale(1.08);
+  width: 100vw;
+}
+.notify-container {
+  position: fixed;
+  display: flex;
+  padding: 0 20px;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+  width: 100vw;
+  z-index: 11;
+  pointer-events: none;
+  transition: all 0.5s;
+  height: 100vh;
+}
+.notify-container .notify {
+  background-color: rgba(15, 15, 15, 0.6);
+  animation: notify-show-hide 5s ease-in-out;
+  border-right: 7px solid rgba(0, 0, 0, 0.4);
+  transition: all 0.5s;
+  color: white;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 15px;
+  padding: 13px 15px;
+  height: 72px;
+}
+.notify-container .notify .title {
+  font-size: 1.1rem;
+}
+.notify-container .notify .content {
+  margin-top: 5px;
+  color: #eee;
+  font-size: 0.85rem;
+}
+@keyframes notify-show-hide {
+  0% {
+    opacity: 0;
+    transform: translate(100vw, 0);
+    margin-bottom: 15px;
+  }
+  15% {
+    opacity: 1;
+    transform: translate(0, 0);
+    margin-bottom: 15px;
+  }
+  85% {
+    opacity: 1;
+    transform: translate(0, 0);
+    margin-bottom: 15px;
+  }
+  100% {
+    opacity: 0;
+    margin-bottom: -72px;
+  }
+}
+.corner-button {
+  z-index: 10;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.3));
+  position: absolute;
+  transition: all 0.5s;
+}
+.corner-button:hover {
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.5));
+}
+.index {
+  height: 100px;
+  width: 100px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  clip-path: ellipse(100% 100% at 0 0);
+  -webkit-clip-path: ellipse(100% 100% at 0 0);
+  transition: all 0.5s;
+}
+.index:before {
+  margin: 22%;
+  content: "\f004";
+  font-size: 35px;
+  color: #ddd;
+  display: inline-block;
+  font-family: "FontAwesome";
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.5s;
+}
+.index:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.index:active {
+  height: 120px;
+  width: 120px;
+}
+.index:active:before {
+  transform: scale(1.2);
+}
+.about {
+  z-index: 10;
+  height: 100px;
+  width: 100px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  clip-path: ellipse(100% 100% at 100% 0);
+  -webkit-clip-path: ellipse(100% 100% at 100% 0);
+  transition: all 0.5s;
+}
+.about:before {
+  margin: 20% 45%;
+  content: "\f129";
+  font-size: 38px;
+  color: #ddd;
+  display: inline-block;
+  font-family: "FontAwesome";
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.5s;
+}
+.about:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.about:active {
+  height: 120px;
+  width: 120px;
+}
+.about:active:before {
+  transform: scale(1.2);
+}
+.works {
+  z-index: 10;
+  height: 100px;
+  width: 100px;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  clip-path: ellipse(100% 100% at 0 100%);
+  -webkit-clip-path: ellipse(100% 100% at 0 100%);
+  transition: all 0.5s;
+}
+.works:before {
+  margin: 40% 20%;
+  content: "\f005";
+  font-size: 35px;
+  color: #ddd;
+  display: inline-block;
+  font-family: "FontAwesome";
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.5s;
+}
+.works:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.works:active {
+  height: 120px;
+  width: 120px;
+}
+.works:active:before {
+  transform: scale(1.2);
+}
+.links {
+  z-index: 10;
+  height: 100px;
+  width: 100px;
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  clip-path: ellipse(100% 100% at 100% 100%);
+  -webkit-clip-path: ellipse(100% 100% at 100% 100%);
+  transition: all 0.5s;
+}
+.links:before {
+  margin: 45%;
+  content: "\f0c1";
+  font-size: 35px;
+  color: #ddd;
+  display: inline-block;
+  font-family: "FontAwesome";
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.5s;
+}
+.links:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.links:active {
+  height: 120px;
+  width: 120px;
+}
+.links:active:before {
+  transform: scale(1.2);
+}
+.main-content {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 2000px;
+  z-index: 9;
+}
+.main-content .index-content {
+  position: absolute;
+  display: flex;
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.descr-icon {
+  background-color: #2f2f2f;
+  box-shadow: 1px 1px 70px rgba(0, 0, 0, 0.16);
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-image: url(https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/%E4%BB%93%E5%BA%93/%E5%9B%BE%E5%BA%8A/%E5%8D%9A%E6%96%87%E9%85%8D%E5%9B%BE/005.jpg);
+  background-size: cover;
+  transition: all 0.75s;
+}
+.descr-icon .mdi {
+  margin: 15px 55px;
+  font-size: 75px;
+  color: #eee;
+  display: inline-block;
+  font-family: "Material Design Icons";
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #eee;
+  margin-top: -60px;
+  padding: 90px 0 40px;
+  display: flex;
+  height: 250px;
+  width: 500px;
+  flex-direction: column;
+  justify-content: center;
+  z-index: -1;
+  text-align: center;
+  box-shadow: 1px 1px 70px rgba(0, 0, 0, 0.16);
+}
+.box .title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+.box .text {
+  color: #ccc;
+  line-height: 2.3;
+  font-size: 0.785rem;
+}
+.box .text ruby {
+  color: #eee;
+}
+.next {
+  background-color: rgba(15, 15, 15, 0.7);
+  width: 100%;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.next .mdi {
+  padding: 20px 0;
+  font-size: 29px;
+  width: 100%;
+  text-align: center;
+  color: #eee;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+.next .mdi:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.box-link {
+  height: 544px;
+  padding: 60px 0 30px;
+}
+.box-link .link-page {
+  position: absolute;
+  width: 500px;
+}
+.box-link .link-list {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  padding: 0 60px;
+}
+.box-link .link-list .a-friend {
+  transition: all 0.5s;
+  padding: 15px;
+  min-width: 140px;
+}
+.box-link .link-list .a-friend img.blog-avatar {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+.box-link .link-list .a-friend .description {
+  transition: all 0.5s;
+  font-size: 0.75rem;
+  color: #cacaca;
+}
+.box-link .link-list .a-friend .text-container {
+  display: flex;
+  margin-left: 4px;
+  flex-direction: column;
+  justify-content: center;
+}
+.box-link .link-list .a-friend .name {
+  transition: all 0.5s;
+  margin-top: 5px;
+  color: #eee;
+}
+.box-link .link-list .a-friend:hover {
+  box-shadow: 0px 1px 25px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translate(0, -3px);
+}
+.box-link .link-list .a-friend:hover .name {
+  color: #fff;
+}
+.box-link .link-list .a-friend:hover .description {
+  color: #e1e1e1;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  40% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+.zhuan {
+  transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(0, -191px) translateZ(-250px) rotateY(0deg);
+  display: flex;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+/* 弹幕相关 */
+.danmaku-container {
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+  position: absolute;
+  pointer-events: none;
+}
+.danmaku-container .normal {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  animation-name: danmaku-right-to-left;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes danmaku-right-to-left {
+  from {
+    transform: translate(100%);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
+</style>
+    	<script src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/txt/手动滚动方格/poi.js" type="text/javascript" charset="utf-8"></script>
+
+    </head>
+    <body>
+        <div class="bg"><div class="bg-ct" style="filter:brightness(0.9);background-image:url(https://i.loli.net/2020/10/09/TA3o4jfHZrOzmUe.jpg)"></div></div>
+        <div class="danmaku-container">
+        </div>
+        <div class="notify-container"></div>
+        
+        <div class="corner-button" style="left:0;"><div class="index" onclick="zhuan('index')"></div></div>
+        <div class="corner-button" style="right:0;"><div class="about"  onclick="zhuan('about')"></div></div>
+        <div class="corner-button" style="bottom:0;left:0"><div class="works" onclick="zhuan('works')"></div></div>
+        <div class="corner-button" style="bottom:0;right:0;"><div class="links" onclick="zhuan('links')"></div></div>
+        
+        <div class="main-content">
+            <div class="zhuan">
+                
+                
+                <div class="index-content" id="front" style="opacity:1;transform: translateZ(250px) translateX(-250px);"></div>
+                <div class="index-content" id="back" style="transform: rotateY(180deg) translateZ(250px) translateX(250px);"></div>
+                <div class="index-content" id="left" style="transform: rotateY(270deg) translateZ(500px) translateX(0px);"></div>
+                <div class="index-content" id="right" style="transform: rotateY(90deg) translateZ(0px) translateX(0px);"></div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <template id="real-content">
+            <div id="index">
+                    <div class="descr-icon"></div>
+                    <div class="box">
+                        <div class="title">WHITESHDS</div>
+                        <div class="text">谢谢<ruby>喂食<rt>Food</rt>
+        </ruby>&nbsp;&nbsp;不想吃<ruby>土<rt>Earth</rt></ruby>了</div>
+                        
+                        <div class="text">「小方格」</div>
+                    </div>
+                    <div class="next">
+                        <a href="https://whiteshds.ga/merger/" class="mdi mdi-gift"></a>
+                        <a href="https://whiteshds.ml/" class="mdi mdi-home"></a>
+                        <a href="https://github.com/whiteshds" target="_blank" class="mdi mdi-github"></a>
+                    </div>
+                </div>
+                
+                <div id="links">
+                    
+                    <div class="descr-icon" id="switch-link-page" style="background-image:none;margin-top:-110px;"><span class="mdi mdi-link"></span></div>
+                    <div class="box box-link">
+                        <div class="link-page" id="link-page-1">
+                            <div class="link-list" style="margin-top:10px"> 
+                                <a class="a-friend" target="_blank" href="https://whiteshds.gitee.io/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f1.png"><div class="text-container"><div class="name">三段式</div><div class="description">GITEE&HEXO</div></div></a>
+                                <a class="a-friend" target="_blank" href="https://whiteshds.ml/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f2.png"><div class="text-container"><div class="name">Butterfly</div><div class="description">本UP &amp;&amp; 博客</div></div></a>
+                                <a class="a-friend" target="_blank" href="https://whiteshds.tk/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f3.png"><div class="text-container"><div class="name">导航书签</div><div class="description">GITLAB&JEKYLL</div></div></a>
+                            </div>
+                            <div class="link-list" style="margin-top:10px"> 
+                                <a class="a-friend" target="_blank" href="https://whiteshds.ga/#/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f4.png"><div class="text-container"><div class="name">点击装逼</div><div class="description">GITHUB&JEKYLL</div></div></a>
+                                <a class="a-friend" target="_blank" href="https://whiteshds.cf/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f5.png"><div class="text-container"><div class="name">一键</div><div class="description">GITHUB&GRIDEA</div></div></a>
+                                <a class="a-friend" target="_blank" href="https://moeboy.ml/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f6.png"><div class="text-container"><div class="name">about</div><div class="description">GITHUB&NETLIFY</div></div></a>
+                            </div>
+                            <div class="link-list" style="margin-top:10px"> 
+                                <a class="a-friend" target="_blank" href="http://whiteshds.gitee.io/squarezero.github.io"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f7.png"><div class="text-container"><div class="name">测试</div><div class="description">GITEE&JEKYLL</div></div></a>
+                                <a class="a-friend" target="_blank" href="https://whiteshds.ml/Gallery/03/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f11.png"><div class="text-container"><div class="name">gallery</div><div class="description">BUTTERFLY&GALLERY</div></div></a>
+                                <a class="a-friend" target="_blank" href="https://whiteshds.ml/about/"><img class="blog-avatar" src="https://cdn.jsdelivr.net/gh/whiteshds/jsDelivr@master/网站介绍/png/f10.png"><div class="text-container"><div class="name">嘻嘻</div><div class="description">感觉我的站要被炸了呢</div></div></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div id="works">
+                    <div class="descr-icon" style="background-image:none"><span class="mdi mdi-star"></span></div>
+                    <div class="box">
+                        <div class="title">作品</div>
+                        <div class="text">作品？不存在的</div>
+                        <div class="text">不过，可以来看看我的博客和GitHub</div>
+                    </div>
+                    <div class="next">
+                        <a href="https://whiteshds.ml/" class="mdi mdi-home"></a>
+                        <a href="https://github.com/whiteshds" target="_blank" class="mdi mdi-github"></a>
+                    </div>
+                </div>
+                <div id="about">
+                    <div class="descr-icon" style="background-image:none"><span class="mdi mdi-information-variant"></span></div>
+                    <div class="box">
+                        <div class="text">酷爱<ruby>DIY<rt>乐趣</rt></ruby>、听音乐的少年</div>
+                        <div class="text">同时喜欢折腾前端、设计和一切科技产品，偶尔研究新产品。</div>
+                        <div class="text">居住在江西，热衷于<ruby>A<rt>B</rt></ruby>，希望有一天能走遍全国</div>
+                        <div class="text">欢迎来找我玩~</div>
+                    </div>
+                    <div class="next">
+                        <a target="_blank" onclick="showNotify('提示','建设中！')" class="mdi mdi-qqchat"></a>
+                    </div>
+                </div>
+        </template>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+              var hm = document.createElement("script");
+              hm.src = "https://hm.baidu.com/hm.js?240c8ec8d1838fe53d87d881fa3924f7";
+              var s = document.getElementsByTagName("script")[0]; 
+              s.parentNode.insertBefore(hm, s);
+            })();
+            </script>
+    
+
+</body></html>
