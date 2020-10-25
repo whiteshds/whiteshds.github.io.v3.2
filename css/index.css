@@ -2944,6 +2944,11 @@ blockquote footer cite:before {
     margin-right: 15px;
   }
 }
+@media screen and (max-width: 768px) {
+  #aside_content {
+    display: none;
+  }
+}
 #post-comment .comment-head {
   margin-bottom: 1rem;
 }
@@ -3597,6 +3602,7 @@ _:future,
 #mobile-sidebar #mobile-sidebar-menus .menus_items .menus_item_child {
   margin: 0;
   list-style: none;
+  display: none;
 }
 #pagination {
   overflow: hidden;
